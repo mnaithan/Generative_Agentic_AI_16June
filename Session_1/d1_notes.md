@@ -32,11 +32,13 @@ Let’s walk through the major milestones in generative modeling:
 - **Famous for**: Deepfakes, AI-generated art  
 
 ### 💡 GAN-like Pseudo Code:
+
 ```python
 for image in real_images:
     generator_output = generator(noise)
     discriminator_loss = discriminator(generator_output, real_images)
     train(generator, discriminator)
+```
 
 ## 🔥 Transformers — *2017–Present*
 
@@ -99,7 +101,7 @@ Text → Tokenization → Embeddings → Model (RNN, Transformer) → Output
 | Chatbots            | Customer Support    | Responds to user queries instantly              |
 | Summarization       | GPT, BART           | Shortens articles intelligently                 |
 | Entity Recognition  | Named Entity Tools  | Detects names, dates, locations in text         |
-
+```
 ---
 
 ### 🔧 Hands-On Example (Using Hugging Face)
@@ -110,7 +112,7 @@ from transformers import pipeline
 # Sentiment Analysis Example
 sentiment = pipeline("sentiment-analysis")
 print(sentiment("I love learning Generative AI!"))
-
+```
 ## ✅ 6. Ethical Considerations & Biases in NLP
 
 ### ⚠️ Key Issues
@@ -167,3 +169,4 @@ text = """Generative AI refers to the use of artificial intelligence systems to 
           It has evolved from RNNs and GANs to Transformers and Foundation Models."""
 
 print(summarizer(text, max_length=40, min_length=10, do_sample=False))
+```
